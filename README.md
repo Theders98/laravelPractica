@@ -41,4 +41,17 @@ Para referirnos al middleware usamos el ** ('auth.role') **
 Cuidado con el nombre de las rutas, no se pueden poner si pensar, hay que intentar no pisar otras
 
 
-## Rutas personalizadas
+## Si pide que se pueda iniciar tanto con email como con nombre podemos usar esto(NO ESTA PROBADO, FALTA INFO)
+
+isset($request['email'])?'email':'nickName'
+
+
+## Agregar middleware al controller
+
+Acuerdate coño, es en el constructor, como puedes tener tan mala memoria, puto retrasado
+
+
+## cambiar nombre de el parametro passwords
+
+Pues ni zorra
+Sospecho que se hará igual que la tabla, es decir cambiandolo en la BD y en el modelo de User
