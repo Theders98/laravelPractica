@@ -8,7 +8,7 @@ use Tymon\JWTAuth\Exceptions\TokenInvalidException;
 
 use Closure;
 
-class ErrorCheck
+class RoleAuth
 {
     /**
      * Handle an incoming request.

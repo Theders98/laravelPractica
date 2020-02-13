@@ -26,5 +26,6 @@ Instalar AUTH
 En el modelo de usuarios agregas 
 ** protected $table = "(nombre de la tabla)" **
 
+
 ## Cambiar nombre de la tabla de la base de datos
 
