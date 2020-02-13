@@ -59,6 +59,7 @@ class humansController extends Controller
      * @param  \App\human  $human
      * @return \Illuminate\Http\Response
      */
+    
     public function update(Request $request, Human $human)
     {
         $human->update($request->all());
