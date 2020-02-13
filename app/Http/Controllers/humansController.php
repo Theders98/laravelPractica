@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\human as Human;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class humansController extends Controller
 {
@@ -13,9 +14,9 @@ class humansController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // public function __construct() {
-    //     $this->middleware('auth:api');
-    // }
+    public function __construct() {
+        $this->middleware('auth.role');
+     }
 
     public function index()
     {
@@ -49,7 +50,8 @@ class humansController extends Controller
     }
         
     public function random() {
-        return response()->json(Human::all()->random(1)[0]);
+           
+        return response()->json(Human::all());
     }
 
     /**
@@ -59,7 +61,7 @@ class humansController extends Controller
      * @param  \App\human  $human
      * @return \Illuminate\Http\Response
      */
-    
+
     public function update(Request $request, Human $human)
     {
         $human->update($request->all());
@@ -76,5 +78,10 @@ class humansController extends Controller
     {
         Human::destroy($human->id);
         return response()->json($human);
+    }
+
+    public function xd(){
+
+        return response()->json(Human::all());
     }
 }
