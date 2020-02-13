@@ -27,5 +27,18 @@ En el modelo de usuarios agregas
 ** protected $table = "(nombre de la tabla)" **
 
 
-## Cambiar nombre de la tabla de la base de datos
+## Añadir el middleware 
 
+Primero crearemos un middleware ** php artisan make:middleware ** se copia  de RoleAuth.php
+Despues se añade en kernel -> ** 'auth.role' => \App\Http\Middleware\RoleAuth::class, **
+usamos ** php artisan vendor:publish **
+
+Para referirnos al middleware usamos el ** ('auth.role') **
+
+
+## Rutas personalizadas
+
+Cuidado con el nombre de las rutas, no se pueden poner si pensar, hay que intentar no pisar otras
+
+
+## Rutas personalizadas
